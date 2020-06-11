@@ -65,6 +65,7 @@ router.post('/upload', (req, res, next)=>{
             if(req.file == undefined){
                 res.render('index', {msg: 'No file Selected'});
             }else{
+                console.log(req.file);
                 res.render('index', {
                     msg: 'Image uploaded',
                     file: `/uploadsURL/${req.file.filename}`
